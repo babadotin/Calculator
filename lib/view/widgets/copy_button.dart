@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -17,17 +16,18 @@ class CopyResultButton extends ConsumerWidget {
       child: InkWell(
         onTap: () => copyText.copyText(),
         child: Container(
-            height: 50.h,
-            margin: const EdgeInsets.all(4),
-            alignment: Alignment.center,
-            decoration: BoxDecoration(
-              color: ColorManager.blue,
-              borderRadius: BorderRadius.circular(10),
-            ),
-            child: Icon(
-              Icons.copy,
-              size: 28.sp,
-            )),
+          height: 50.h,
+          margin: const EdgeInsets.all(4),
+          alignment: Alignment.center,
+          decoration: BoxDecoration(
+            color: ColorManager.blue,
+            borderRadius: BorderRadius.circular(10),
+          ),
+          child: Icon(
+            Icons.copy,
+            size: 28.sp,
+          ),
+        ),
       ),
     );
   }

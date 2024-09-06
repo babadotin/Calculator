@@ -5,14 +5,19 @@ import 'package:calculator/utils/constants/font_family.dart';
 import '../constants/colors.dart';
 
 abstract class AppTheme {
-  //? LIGHT THEME
   static ThemeData get lightTheme {
     return ThemeData(
       cardColor: ColorManager.lightGrey,
       switchTheme: const SwitchThemeData(
-        trackOutlineColor: WidgetStatePropertyAll(ColorManager.blue),
-        thumbColor: WidgetStatePropertyAll(ColorManager.blue),
-        trackColor: WidgetStatePropertyAll(ColorManager.white),
+        trackOutlineColor: WidgetStatePropertyAll(
+          ColorManager.blue,
+        ),
+        thumbColor: WidgetStatePropertyAll(
+          ColorManager.blue,
+        ),
+        trackColor: WidgetStatePropertyAll(
+          ColorManager.white,
+        ),
         thumbIcon: WidgetStatePropertyAll(
           Icon(
             Icons.light_mode,
@@ -20,7 +25,9 @@ abstract class AppTheme {
           ),
         ),
       ),
-      iconTheme: const IconThemeData(color: ColorManager.white),
+      iconTheme: const IconThemeData(
+        color: ColorManager.white,
+      ),
       fontFamily: FontFamilyManager.poppins,
       useMaterial3: true,
       brightness: Brightness.light,
@@ -29,28 +36,33 @@ abstract class AppTheme {
         elevation: 0,
         backgroundColor: ColorManager.white,
         centerTitle: false,
-        iconTheme: const IconThemeData(color: ColorManager.black),
+        iconTheme: const IconThemeData(
+          color: ColorManager.black,
+        ),
         titleTextStyle: TextStyle(
-            fontFamily: FontFamilyManager.poppins,
-            decoration: TextDecoration.underline,
-            decorationThickness: 2,
-            decorationColor: ColorManager.blue,
-            color: ColorManager.black,
-            fontSize: 20.sp,
-            fontWeight: FontWeight.w500),
+          fontFamily: FontFamilyManager.poppins,
+          decoration: TextDecoration.underline,
+          decorationThickness: 2,
+          decorationColor: ColorManager.blue,
+          color: ColorManager.black,
+          fontSize: 20.sp,
+          fontWeight: FontWeight.w500,
+        ),
       ),
       textTheme: TextTheme(
         bodyLarge: TextStyle(
-            overflow: TextOverflow.ellipsis,
-            fontSize: 60.sp,
-            height: 1,
-            color: ColorManager.black,
-            fontWeight: FontWeight.w500),
+          overflow: TextOverflow.ellipsis,
+          fontSize: 60.sp,
+          height: 1,
+          color: ColorManager.black,
+          fontWeight: FontWeight.w500,
+        ),
         bodyMedium: TextStyle(
-            fontSize: 20.sp,
-            overflow: TextOverflow.ellipsis,
-            color: ColorManager.white,
-            fontWeight: FontWeight.w500),
+          fontSize: 20.sp,
+          overflow: TextOverflow.ellipsis,
+          color: ColorManager.white,
+          fontWeight: FontWeight.w500,
+        ),
       ),
     );
   }
@@ -58,9 +70,15 @@ abstract class AppTheme {
   static ThemeData get darkTheme {
     return ThemeData(
       switchTheme: const SwitchThemeData(
-        trackOutlineColor: WidgetStatePropertyAll(ColorManager.blue),
-        thumbColor: WidgetStatePropertyAll(ColorManager.blue),
-        trackColor: WidgetStatePropertyAll(ColorManager.black),
+        trackOutlineColor: WidgetStatePropertyAll(
+          ColorManager.blue,
+        ),
+        thumbColor: WidgetStatePropertyAll(
+          ColorManager.blue,
+        ),
+        trackColor: WidgetStatePropertyAll(
+          ColorManager.black,
+        ),
         thumbIcon: WidgetStatePropertyAll(
           Icon(
             Icons.dark_mode,
@@ -68,7 +86,9 @@ abstract class AppTheme {
           ),
         ),
       ),
-      iconTheme: const IconThemeData(color: ColorManager.white),
+      iconTheme: const IconThemeData(
+        color: ColorManager.white,
+      ),
       fontFamily: FontFamilyManager.poppins,
       useMaterial3: true,
       brightness: Brightness.light,
@@ -77,28 +97,33 @@ abstract class AppTheme {
         elevation: 0,
         backgroundColor: ColorManager.black,
         centerTitle: false,
-        iconTheme: const IconThemeData(color: ColorManager.white),
+        iconTheme: const IconThemeData(
+          color: ColorManager.white,
+        ),
         titleTextStyle: TextStyle(
-            fontFamily: FontFamilyManager.poppins,
-            decoration: TextDecoration.underline,
-            decorationThickness: 2,
-            decorationColor: ColorManager.blue,
-            color: ColorManager.white,
-            fontSize: 20.sp,
-            fontWeight: FontWeight.w500),
+          fontFamily: FontFamilyManager.poppins,
+          decoration: TextDecoration.underline,
+          decorationThickness: 2,
+          decorationColor: ColorManager.blue,
+          color: ColorManager.white,
+          fontSize: 20.sp,
+          fontWeight: FontWeight.w500,
+        ),
       ),
       textTheme: TextTheme(
         bodyLarge: TextStyle(
-            overflow: TextOverflow.ellipsis,
-            fontSize: 60.sp,
-            height: 1,
-            color: ColorManager.white,
-            fontWeight: FontWeight.w500),
+          overflow: TextOverflow.ellipsis,
+          fontSize: 60.sp,
+          height: 1,
+          color: ColorManager.white,
+          fontWeight: FontWeight.w500,
+        ),
         bodyMedium: TextStyle(
-            fontSize: 20.sp,
-            overflow: TextOverflow.ellipsis,
-            color: ColorManager.white,
-            fontWeight: FontWeight.bold),
+          fontSize: 20.sp,
+          overflow: TextOverflow.ellipsis,
+          color: ColorManager.white,
+          fontWeight: FontWeight.bold,
+        ),
       ),
     );
   }

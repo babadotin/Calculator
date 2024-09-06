@@ -6,11 +6,14 @@ class CacheData {
     sharedpref = await SharedPreferences.getInstance();
   }
 
-  static Future<void> setInt({required String key, required int value}) async {
+  static Future<void> setInt({
+    required String key,
+    required int value,
+  }) async {
     await sharedpref.setInt(key, value);
   }
 
-  static dynamic getData({required String key}) {
+  static dynamic getData({required String key,}) {
     return sharedpref.get(key);
   }
 

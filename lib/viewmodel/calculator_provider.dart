@@ -44,13 +44,14 @@ class CalculatorViewModel extends StateNotifier<CalculatorModel> {
       try {
         final value = double.parse(state.expression);
         final percentage = value / 100;
-        state = state.copyWith(expression: percentage.toString());
+        state = state.copyWith(
+          expression: percentage.toString(),
+        );
       } catch (e) {
         state = state.copyWith(result: 'Error');
       }
     }
   }
-
 
   void evaluateExpression() {
     try {
@@ -69,16 +70,22 @@ class CalculatorViewModel extends StateNotifier<CalculatorModel> {
   }
 
   void appendLeftParenthesis() {
-    state = state.copyWith(expression: '${state.expression}(');
+    state = state.copyWith(
+      expression: '${state.expression}(',
+    );
   }
 
   void appendRightParenthesis() {
-    state = state.copyWith(expression: '${state.expression})');
+    state = state.copyWith(
+      expression: '${state.expression},),',
+    );
   }
 
   void copyText() {
     if (state.result.isNotEmpty) {
-      Clipboard.setData(ClipboardData(text: state.result));
+      Clipboard.setData(
+        ClipboardData(text: state.result),
+      );
       log('copy');
     }
   }

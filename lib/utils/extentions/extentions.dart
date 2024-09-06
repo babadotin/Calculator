@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-//! THEME EXTENSION
 extension ThemeExtensions on BuildContext {
   ThemeData get theme => Theme.of(this);
   IconThemeData get iconTheme => Theme.of(this).iconTheme;
@@ -15,7 +14,6 @@ extension ThemeExtensions on BuildContext {
       Theme.of(this).outlinedButtonTheme;
 }
 
-//! SCREEN EXTENSION
 extension MediaQueryExtensions on BuildContext {
   double get height => MediaQuery.sizeOf(this).height;
   double get width => MediaQuery.sizeOf(this).width;

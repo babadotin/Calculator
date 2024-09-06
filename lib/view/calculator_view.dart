@@ -19,7 +19,9 @@ class CalculatorView extends ConsumerWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Calculator'),
+        title: const Text(
+          'Calculator',
+        ),
         actions: [
           Switch(
             value: theme == ThemeEnum.dark,
@@ -33,15 +35,22 @@ class CalculatorView extends ConsumerWidget {
           Expanded(
             child: Container(
               alignment: Alignment.bottomRight,
-              padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 10),
+              padding: const EdgeInsets.symmetric(
+                horizontal: 24,
+                vertical: 10,
+              ),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.end,
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
-                  Text(calculator.expression,
-                      maxLines: 2,
-                      style: context.textTheme.bodyMedium?.copyWith(
-                          color: ColorManager.lightGrey, fontSize: 24.sp)),
+                  Text(
+                    calculator.expression,
+                    maxLines: 2,
+                    style: context.textTheme.bodyMedium?.copyWith(
+                      color: ColorManager.lightGrey,
+                      fontSize: 24.sp,
+                    ),
+                  ),
                   const SizedBox(height: 10),
                   Text(
                     calculator.result,
@@ -58,7 +67,9 @@ class CalculatorView extends ConsumerWidget {
             thickness: 2,
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 10),
+            padding: const EdgeInsets.symmetric(
+              horizontal: 10,
+            ),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
@@ -69,9 +80,20 @@ class CalculatorView extends ConsumerWidget {
                 buildButtonRow(context, ref, ['1', '2', '3', '=']),
                 const Row(
                   children: [
-                    Expanded(flex: 2, child: CalculatorButton(text: '0')),
-                    Expanded(child: CalculatorButton(text: '.')),
-                    Expanded(child: CopyResultButton()),
+                    Expanded(
+                      flex: 2,
+                      child: CalculatorButton(
+                        text: '0',
+                      ),
+                    ),
+                    Expanded(
+                      child: CalculatorButton(
+                        text: '.',
+                      ),
+                    ),
+                    Expanded(
+                      child: CopyResultButton(),
+                    ),
                   ],
                 ),
               ],
@@ -84,11 +106,13 @@ class CalculatorView extends ConsumerWidget {
 
   Row buildButtonRow(BuildContext context, WidgetRef ref, List<String> texts) {
     return Row(
-      children: texts.map((text) {
-        return Expanded(
-          child: CalculatorButton(text: text),
-        );
-      }).toList(),
+      children: texts.map(
+        (text) {
+          return Expanded(
+            child: CalculatorButton(text: text),
+          );
+        },
+      ).toList(),
     );
   }
 }

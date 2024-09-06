@@ -1,4 +1,3 @@
-
 import 'package:calculator/utils/extentions/extentions.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -53,9 +52,13 @@ class CalculatorButton extends ConsumerWidget {
             borderRadius: BorderRadius.circular(10),
           ),
           child: Center(
-            child: Text(text,
-                style: context.textTheme.bodyMedium
-                    ?.copyWith(fontSize: fontSize, color: textColor)),
+            child: Text(
+              text,
+              style: context.textTheme.bodyMedium?.copyWith(
+                fontSize: fontSize,
+                color: textColor,
+              ),
+            ),
           ),
         ),
       ),
